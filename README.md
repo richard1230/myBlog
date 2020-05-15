@@ -6,3 +6,6 @@
 ## 多线程
 [多线程笔记1](https://github.com/richard1230/myblog/issues/1)
 
+## 框架篇
+[springboot详解](https://juejin.im/post/5dfb4d7151882542977d0cb7)
+
