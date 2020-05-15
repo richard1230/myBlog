@@ -17,3 +17,5 @@
 ## 框架篇
 * [springboot详解](https://juejin.im/post/5dfb4d7151882542977d0cb7)
 
+## 其他
+* [掘金知识搜索库](http://zy2071.com/Fun/jueJinSearch.html)
