@@ -15,7 +15,8 @@
 * [深入理解 Java 并发核心机制](https://juejin.im/post/5e05931ee51d45582c27d737)
 
 ## 框架篇
-* [springboot详解](https://juejin.im/post/5dfb4d7151882542977d0cb7)
+* [Springboot详解](https://juejin.im/post/5dfb4d7151882542977d0cb7)
+* [Spring常用注解总结](https://juejin.im/post/5ea2593f6fb9a03c73799bf4)
 
 ## 其他
 * [掘金知识搜索库](http://zy2071.com/Fun/jueJinSearch.html)
