@@ -10,6 +10,7 @@
 ## 学习方法篇
 * [技术人的修炼之道：从业余到专业](https://mp.weixin.qq.com/s/gBgFyy4MMrF5vn-8NGEVQw)
 * [关于漏洞挖掘的一点想法](https://mp.weixin.qq.com/s/79k5bxGr1ykCpN4lSeiTqw)
+* [以刷LeetCode为例谈谈如何学习](https://github.com/richard1230/myJavaBlog/issues/4)
 
 
 ## 数据结构与算法
