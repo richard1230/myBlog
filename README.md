@@ -33,6 +33,7 @@
 * [Spring常用注解总结](https://juejin.im/post/5ea2593f6fb9a03c73799bf4)
 
 ## java高阶-架构篇
+* [创建型模式-工厂方法模式](https://github.com/richard1230/myJavaBlog/issues/5)
 
 * [深入设计模式](https://refactoringguru.cn/design-patterns/book)
 
