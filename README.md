@@ -40,6 +40,7 @@
 * [创建型模式-生成器模式](https://github.com/richard1230/myJavaBlog/issues/7)
 
 * [深入设计模式](https://refactoringguru.cn/design-patterns/book)
+* [设计模式看了又忘，忘了又看？](https://juejin.im/post/5ceb37a76fb9a07f0870737a)
 
 ## 其他
 * [掘金知识搜索库](http://zy2071.com/Fun/jueJinSearch.html)
