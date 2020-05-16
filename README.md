@@ -32,5 +32,9 @@
 * [Springboot详解](https://juejin.im/post/5dfb4d7151882542977d0cb7)
 * [Spring常用注解总结](https://juejin.im/post/5ea2593f6fb9a03c73799bf4)
 
+## java高阶-架构篇
+
+* [深入设计模式](https://refactoringguru.cn/design-patterns/book)
+
 ## 其他
 * [掘金知识搜索库](http://zy2071.com/Fun/jueJinSearch.html)
