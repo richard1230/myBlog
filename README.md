@@ -38,6 +38,7 @@
 * [创建型模式-工厂方法模式](https://github.com/richard1230/myJavaBlog/issues/5)
 * [创建型模式-抽象工厂模式](https://github.com/richard1230/myJavaBlog/issues/6)
 * [创建型模式-生成器模式(建造者模式)](https://github.com/richard1230/myJavaBlog/issues/7)
+* [创建型模式-原型模式](https://github.com/richard1230/myJavaBlog/issues/9)
 
 * [深入设计模式](https://refactoringguru.cn/design-patterns/book)
 * [设计模式看了又忘，忘了又看？](https://juejin.im/post/5ceb37a76fb9a07f0870737a)
