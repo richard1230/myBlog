@@ -42,6 +42,7 @@
 * [创建型模式-单例模式](https://github.com/richard1230/myJavaBlog/issues/8)
 * [结构型模式-适配器模式](https://github.com/richard1230/myJavaBlog/issues/10)
 * [结构型模式-桥接模式](https://github.com/richard1230/myJavaBlog/issues/11)
+* [结构型模式-组合模式](https://github.com/richard1230/myJavaBlog/issues/12)
 
 * [深入设计模式](https://refactoringguru.cn/design-patterns/book)
 * [设计模式看了又忘，忘了又看？](https://juejin.im/post/5ceb37a76fb9a07f0870737a)
