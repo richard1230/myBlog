@@ -48,6 +48,8 @@
 * [结构型模式-享元模式](https://github.com/richard1230/myJavaBlog/issues/15)
 * [结构型模式-代理模式](https://github.com/richard1230/myJavaBlog/issues/16)
 * [行为模式-责任链模式](https://github.com/richard1230/myJavaBlog/issues/17)
+* [行为模式-命令模式](https://github.com/richard1230/myJavaBlog/issues/18)
+
 
 * [深入设计模式](https://refactoringguru.cn/design-patterns/book)
 * [设计模式看了又忘，忘了又看？](https://juejin.im/post/5ceb37a76fb9a07f0870737a)
