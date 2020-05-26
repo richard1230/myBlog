@@ -49,6 +49,7 @@
 * [结构型模式-代理模式](https://github.com/richard1230/myJavaBlog/issues/16)
 * [行为模式-责任链模式](https://github.com/richard1230/myJavaBlog/issues/17)
 * [行为模式-命令模式](https://github.com/richard1230/myJavaBlog/issues/18)
+* [行为模式-迭代器模式](https://github.com/richard1230/myJavaBlog/issues/19)
 
 
 * [深入设计模式](https://refactoringguru.cn/design-patterns/book)
