@@ -50,6 +50,7 @@
 * [行为模式-责任链模式](https://github.com/richard1230/myJavaBlog/issues/17)
 * [行为模式-命令模式](https://github.com/richard1230/myJavaBlog/issues/18)
 * [行为模式-迭代器模式](https://github.com/richard1230/myJavaBlog/issues/19)
+* [行为模式-中介者模式](https://github.com/richard1230/myJavaBlog/issues/20)
 * [行为模式-备忘录模式](https://github.com/richard1230/myJavaBlog/issues/21)
 
 
