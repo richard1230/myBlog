@@ -5,7 +5,7 @@
 - [java单元测试](#java单元测试)
 - [多线程与并发](#多线程与并发)
 - [框架篇](#框架篇)
-- [java高阶-架构篇](#java高阶-架构篇)
+- [java高阶-架构篇](#java高阶-设计模式篇)
 - [其他](#其他)
 
 ## 学习方法篇
@@ -34,7 +34,7 @@
 * [Springboot详解](https://juejin.im/post/5dfb4d7151882542977d0cb7)
 * [Spring常用注解总结](https://juejin.im/post/5ea2593f6fb9a03c73799bf4)
 
-## java高阶-架构篇
+## java高阶-设计模式篇
 * [创建型模式-工厂方法模式](https://github.com/richard1230/myJavaBlog/issues/5)
 * [创建型模式-抽象工厂模式](https://github.com/richard1230/myJavaBlog/issues/6)
 * [创建型模式-生成器模式(建造者模式)](https://github.com/richard1230/myJavaBlog/issues/7)
