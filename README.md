@@ -36,11 +36,11 @@
 
 ## java高阶-设计模式篇
 * [创建型模式-工厂方法模式](https://github.com/richard1230/myJavaBlog/issues/5) *
-* [创建型模式-抽象工厂模式](https://github.com/richard1230/myJavaBlog/issues/6)
-* [创建型模式-生成器模式(建造者模式)](https://github.com/richard1230/myJavaBlog/issues/7)
+* [创建型模式-抽象工厂模式](https://github.com/richard1230/myJavaBlog/issues/6) *
+* [创建型模式-生成器模式(建造者模式)](https://github.com/richard1230/myJavaBlog/issues/7) *
 * [创建型模式-原型模式](https://github.com/richard1230/myJavaBlog/issues/9)
-* [创建型模式-单例模式](https://github.com/richard1230/myJavaBlog/issues/8)
-* [结构型模式-适配器模式](https://github.com/richard1230/myJavaBlog/issues/10)
+* [创建型模式-单例模式](https://github.com/richard1230/myJavaBlog/issues/8) *
+* [结构型模式-适配器模式](https://github.com/richard1230/myJavaBlog/issues/10) *
 * [结构型模式-桥接模式](https://github.com/richard1230/myJavaBlog/issues/11)
 * [结构型模式-组合模式](https://github.com/richard1230/myJavaBlog/issues/12)
 * [结构型模式-装饰模式](https://github.com/richard1230/myJavaBlog/issues/13)
