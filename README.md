@@ -35,7 +35,7 @@
 * [Spring常用注解总结](https://juejin.im/post/5ea2593f6fb9a03c73799bf4)
 
 ## java高阶-设计模式篇
-* [创建型模式-工厂方法模式](https://github.com/richard1230/myJavaBlog/issues/5)
+* [创建型模式-工厂方法模式](https://github.com/richard1230/myJavaBlog/issues/5) *
 * [创建型模式-抽象工厂模式](https://github.com/richard1230/myJavaBlog/issues/6)
 * [创建型模式-生成器模式(建造者模式)](https://github.com/richard1230/myJavaBlog/issues/7)
 * [创建型模式-原型模式](https://github.com/richard1230/myJavaBlog/issues/9)
