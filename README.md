@@ -53,6 +53,7 @@
 * [行为模式-中介者模式](https://github.com/richard1230/myJavaBlog/issues/20)
 * [行为模式-备忘录模式](https://github.com/richard1230/myJavaBlog/issues/21)
 * [行为模式-观察者模式](https://github.com/richard1230/myJavaBlog/issues/23) *
+* [行为模式-状态模式](https://github.com/richard1230/myJavaBlog/issues/24)
 
 *****************************************************************************************
 * [设计模式实战场](https://github.com/iluwatar/java-design-patterns) (强烈推荐!!!)
