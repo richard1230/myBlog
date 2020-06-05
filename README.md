@@ -56,6 +56,7 @@
 * [行为模式-状态模式](https://github.com/richard1230/myJavaBlog/issues/24)
 * [行为模式-策略模式](https://github.com/richard1230/myJavaBlog/issues/25) *
 * [行为模式-模板方法模式](https://github.com/richard1230/myJavaBlog/issues/26)
+* [行为模式-访问者模式](https://github.com/richard1230/myJavaBlog/issues/27)
 
 *****************************************************************************************
 * [设计模式实战场](https://github.com/iluwatar/java-design-patterns) (强烈推荐!!!)
