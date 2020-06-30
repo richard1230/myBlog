@@ -62,6 +62,7 @@
 * [设计模式实战场](https://github.com/iluwatar/java-design-patterns) (强烈推荐!!!)
 * [深入设计模式](https://refactoringguru.cn/design-patterns/book)
 * [设计模式看了又忘，忘了又看？](https://juejin.im/post/5ceb37a76fb9a07f0870737a)
+* [设计模式也可以这么简单](https://www.javadoop.com/post/design-pattern)
 
 ## 其他
 * [掘金知识搜索库](http://zy2071.com/Fun/jueJinSearch.html)
