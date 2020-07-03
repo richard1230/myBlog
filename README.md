@@ -68,3 +68,4 @@
 * [掘金知识搜索库](http://zy2071.com/Fun/jueJinSearch.html)
 * [howtodoinjava](https://howtodoinjava.com/)
 * [javadoop](https://javadoop.com/)
+* [我的英语博客](https://medium.com/me/stories/public)
