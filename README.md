@@ -20,6 +20,7 @@
 ## java基础
 * [java基础笔记1-使用git/github进行团队协作](https://github.com/richard1230/myJavaBlog/issues/2)
 * [java基础笔记2-字节码,类与包](https://github.com/richard1230/myJavaBlog/issues/3)
+* [java基础笔记3-对象与引用，传值与传引用](https://github.com/richard1230/myBlog/issues/28)
 * [平常开发中用的最多的java工具类,第三方依赖包](https://juejin.im/post/5d4a25b351882505c105cc6e)
 
 ## java单元测试(拥抱开源必经之路)
