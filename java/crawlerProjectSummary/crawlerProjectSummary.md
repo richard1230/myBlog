@@ -94,7 +94,34 @@ mysql里面的一个坑:utf8不是正宗的utf8,而utf8mb4才是正宗的utf8!!!
 ![62032331.png](crawlerProjectSummary_files/62032331.png)
 
 
+## git撤销与回滚
+撤销git add .
+```
+$git rm -r -f --cached .
 
+```
+撤销Git init
+```
+$rm -rf .git
+
+```
+撤销 `git commit `
+具体情况:
+当执行了`git commit -m "xxx"`之后，发现这么一个错误:(或者想取消这次的提交)
+```
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:richard1230/myblog.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+其中的一种比较简单的方案就是直接回滚到上一次提交
+```
+git reset  上一次提交的id
+
+```
 
 
 
