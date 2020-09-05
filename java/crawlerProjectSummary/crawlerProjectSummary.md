@@ -105,7 +105,7 @@ $git rm -r -f --cached .
 $rm -rf .git
 
 ```
-撤销 `git commit `
+撤销 `git commit ` </br>
 具体情况:
 当执行了`git commit -m "xxx"`之后，发现这么一个错误:(或者想取消这次的提交)
 ```
