@@ -69,6 +69,9 @@
 * [设计模式看了又忘，忘了又看？](https://juejin.im/post/5ceb37a76fb9a07f0870737a)
 * [设计模式也可以这么简单](https://www.javadoop.com/post/design-pattern)
 
+## 自己造的轮子
+[记账本相关总结](https://github.com/richard1230/myBlog/blob/master/java/pocketBookProject_note/pocketBookProjectSummary.md)
+
 ## 其他
 * [掘金知识搜索库](http://zy2071.com/Fun/jueJinSearch.html)
 * [howtodoinjava](https://howtodoinjava.com/)
