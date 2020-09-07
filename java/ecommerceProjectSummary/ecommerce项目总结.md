@@ -8,6 +8,8 @@
 
 
 3.卖家可以新建/修改店铺，添加/编辑/删除宝贝，查看订单，发货
+
+[项目源代码地址](https://github.com/richard1230/wxshop)
 ## Authentication和Authorization之间的区别
 Authentication: 鉴权
 Authorization：授权
