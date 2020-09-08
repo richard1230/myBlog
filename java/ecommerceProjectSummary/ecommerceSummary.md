@@ -1,13 +1,12 @@
 [TOC]
 ## 前言
-这里主要总结一下在做电商这个项目里面所遇到的问题以及相关知识点总结
-整个项目实现的功能有:
-1.基于手机验证码的登录
+这里主要总结一下在做电商这个项目里面所遇到的问题以及相关知识点总结,整个项目实现的功能有:<br>
+1.基于手机验证码的登录<br>
 
-2.买家可以编辑个人信息/收货地址，商品浏览，添加购物车，下单，付款，查看物流信息，确认收货
+2.买家可以编辑个人信息/收货地址，商品浏览，添加购物车，下单，付款，查看物流信息，确认收货<br>
 
 
-3.卖家可以新建/修改店铺，添加/编辑/删除宝贝，查看订单，发货
+3.卖家可以新建/修改店铺，添加/编辑/删除宝贝，查看订单，发货<br>
 
 [项目源代码地址](https://github.com/richard1230/wxshop)
 ## Authentication和Authorization之间的区别
@@ -101,13 +100,7 @@ mvn dependency:tree > d.txt
 ### 最佳实践
 
 
-很多项目都使用maven提供的dependencyManagement配置来管理依赖关系，保证不会因为引入了新的组件，导致基础组件的版本发生变更，出现漏测试的情况。该机制在Spring boot、ServiceComb等开源项目中广泛采用。对于需要提供额外三方软件使用清单的商用产品，这种管理方式可以增强认证信息的准确性。以ServiceComb为例，该项目引入的所有的三方件的版本都统一在:
-
-
-[https://github.com/apache/incubator-servicecomb-java-chassis/blob/master/java-chassis-dependencies/pom.xml](https://github.com/apache/incubator-servicecomb-java-chassis/blob/master/java-chassis-dependencies/pom.xml)
-
-
-管理，其他的子模块都不配置三方件的版本号，从而每个子模块依赖的三方件版本都是同一个版本，即使他们依赖的模块间接依赖了不同的三方件版本。
+很多项目都使用maven提供的dependencyManagement配置来管理依赖关系，保证不会因为引入了新的组件，导致基础组件的版本发生变更，出现漏测试的情况。该机制在Spring boot、ServiceComb等开源项目中广泛采用。对于需要提供额外三方软件使用清单的商用产品，这种管理方式可以增强认证信息的准确性。以apache ServiceComb为例，该项目引入的所有的三方件的版本都统一在[pom.xml文件](https://github.com/apache/incubator-servicecomb-java-chassis/blob/master/java-chassis-dependencies/pom.xml)里面管理，其他的子模块都不配置三方件的版本号，从而每个子模块依赖的三方件版本都是同一个版本，即使他们依赖的模块间接依赖了不同的三方件版本。
 
 
 这种机制给使用者也带来了一定的好处，使用者可以采用dependencyManagement来定义自己的三方组件依赖关系，定义的时候，通过import方式继承。比如使用ServiceComb的微服务，可以采用如下方式管理依赖关系：
@@ -130,20 +123,15 @@ mvn dependency:tree > d.txt
 ```
 
 
-一个复杂的例子
+一个复杂的例子:
 
 
-这个例子是在业务代码中使用Spring Boot、Spring Cloud、ServiceComb开源组件和ServiceComb商用组件的复杂场景。业务使用Spring Boot开发，并且启用了ServiceComb功能。可以通过下面的配置管理依赖关系。通过调整3个组件的顺序，决定优先使用哪些三方件。常见的业务场景有：
+这个例子是在业务代码中使用Spring Boot、Spring Cloud、ServiceComb开源组件和ServiceComb商用组件的复杂场景。业务使用Spring Boot开发，并且启用了ServiceComb功能。可以通过下面的配置管理依赖关系。通过调整3个组件的顺序，决定优先使用哪些三方件。常见的业务场景有：<br>
 
 
+Spring Cloud依赖于Spring Boot，业务发现Spring Boot的bug，并升级了Spring boot，但是Spring Cloud没有配套对应版本的新版本。在Spring Boot接口兼容的情况下，可以将Spring Boot的依赖放到Spring Cloud前面，从而达到独立升级Spring Boot的目的。<br>
 
-
-
-
-Spring Cloud依赖于Spring Boot，业务发现Spring Boot的bug，并升级了Spring boot，但是Spring Cloud没有配套对应版本的新版本。在Spring Boot接口兼容的情况下，可以将Spring Boot的依赖放到Spring Cloud前面，从而达到独立升级Spring Boot的目的。
-
-
-Spring Cloud发现了bug，但是修复该bug的版本同时升级了Spring Boot，业务当前有其他原因不能使用Spring Boot的新版本，这个时候，可以将Spring Boot的依赖放到前面，保证了不会由于升级Spring Cloud，而引入Spring Boot新的版本。
+Spring Cloud发现了bug，但是修复该bug的版本同时升级了Spring Boot，业务当前有其他原因不能使用Spring Boot的新版本，这个时候，可以将Spring Boot的依赖放到前面，保证了不会由于升级Spring Cloud，而引入Spring Boot新的版本。<br>
 
 
 ```
@@ -179,20 +167,27 @@ Spring Cloud发现了bug，但是修复该bug的版本同时升级了Spring Boot
 ```
 
 
-上面列举了依赖关系管理的最佳实践。在配套不同组件进行业务代码开发时，如果碰到ClassNotFoundException、NoSuchMethodException等异常，可以通过IDE（比如eclipse）或者mvn dependency:tree命令来分析是否由于依赖关系错误，引入了某些三方件较老的版本，然后都可以利用dependencyManagement机制来强制约束三方件的版本号。正如最开始指出的，任何的三方件升级都可能存在风险，并且有些时候会出现无法解决，需要修改依赖组件代码的情况。一个好的实践是进行持续的集成，并增加适当的测试用例，尽早发现问题和解决依赖关系管理引入的接口不兼容问题。我们建议开发者能够结合上面的例子，适当调整下各个组件的顺序，观察一个项目实际使用的三方件版本的变化，深刻理解dependencyManagement的作用原理，这样能够帮助快速解决开发过程中碰到的ClassNotFoundException、NoSuchMethodException等问题。
+上面列举了依赖关系管理的最佳实践。在配套不同组件进行业务代码开发时，如果碰到ClassNotFoundException、NoSuchMethodException等异常，可以通过IDE（比如IntelliJ）或者mvn dependency:tree命令来分析是否由于依赖关系错误，引入了某些三方件较老的版本，然后都可以利用dependencyManagement机制来强制约束三方件的版本号。正如最开始指出的，任何的三方件升级都可能存在风险，并且有些时候会出现无法解决，需要修改依赖组件代码的情况。一个好的实践是进行持续的集成，并增加适当的测试用例，尽早发现问题和解决依赖关系管理引入的接口不兼容问题。我们建议开发者能够结合上面的例子，适当调整下各个组件的顺序，观察一个项目实际使用的三方件版本的变化，深刻理解dependencyManagement的作用原理，这样能够帮助快速解决开发过程中碰到的ClassNotFoundException、NoSuchMethodException等问题。
 
 
 ## 数据库里面的一个坑
 
 
-有个注意点:已经上线的数据不能clean(如何在已经上线的数据库里面添加列属性)
-这里以本项目为例:
-错误的示范:
+有个注意点:已经上线的数据不能clean(如何在已经上线的数据库里面添加列属性) <br>
+
+这里以本项目为例:<br>
+
+错误的示范:<br>
+
 ![62709521.png](ecommerce项目总结_files/62709521.png)
-正确的示范:
-添加一个sql文件:
+
+正确的示范:<br>
+
+添加一个sql文件:<br>
+
 ![62753293.png](ecommerce项目总结_files/62753293.png)
-执行数据迁移:
+
+执行数据迁移:<br>
 ```
 mvn flyway:migrate
 ```
@@ -200,7 +195,7 @@ mvn flyway:migrate
 ### 问题的产生:
 
 
-怎么样才能使得你的服务器抵挡住很多人的访问量:
+怎么样才能使得你的服务器抵挡住很多人的访问量?
 ### 解决方案:
 
 
@@ -221,48 +216,81 @@ mvn flyway:migrate
 
 每一个微服务里面如果出问题了,他不会影响到其他的微服务;
 ### 大应用的缺点:
-1.难以扩展
-2.交付时间长，开发慢
-3.复杂，维护困难
-4.故障率高
+1.难以扩展<br>
+
+2.交付时间长，开发慢<br>
+
+3.复杂，维护困难<br>
+
+4.故障率高<br>
 ### 微服务的特点:
-整个应用按照业务拆分，相互使用RPC/HTTP/REST通信；
-松散耦合
-独立开发、测试，部署，演进
-不限制语言
+整个应用按照业务拆分，相互使用RPC/HTTP/REST通信；<br>
+
+松散耦合<br>
+
+独立开发、测试，部署，演进<br>
+
+不限制语言<br>
+
 ### 引入DubboRPC
-Dubbo是什么?
-Dubbo 是一款高性能、轻量级的开源 RPC 框架，提供服务自动注册、自动发现等高效服务治理方案， 可以和 Spring 框架无缝集成。
-RPC是什么？
-RPC，Remote Procedure Call 即远程过程调用
-简单的说本机上内部的方法调用都可以称为本地过程调用，而远程过程调用实际上就指的是你本地调用了远程机子上的某个方法，这就是远程过程调用。
-Dubbo核心组成:
-服务消费者（服务调用者）:
-首先消费者面向接口编程，所以需要得知有哪些接口可以调用;
-现在知道有哪些接口可以调用了，但是只有接口啊，具体的实现怎么来？这事必须框架给处理了！所以还需要来个代理类，让消费者只管调，啥事都别管了，我代理帮你搞定。
+Dubbo是什么?<br>
+
+Dubbo 是一款高性能、轻量级的开源 RPC 框架，提供服务自动注册、自动发现等高效服务治理方案， 可以和 Spring 框架无缝集成。<br>
+
+RPC是什么？<br>
+
+RPC，Remote Procedure Call 即远程过程调用<br>
+
+简单的说本机上内部的方法调用都可以称为本地过程调用，而远程过程调用实际上就指的是你本地调用了远程机子上的某个方法，这就是远程过程调用。<br>
+
+Dubbo核心组成:<br>
+
+服务消费者（服务调用者）:<br>
+
+首先消费者面向接口编程，所以需要得知有哪些接口可以调用;<br>
+
+现在知道有哪些接口可以调用了，但是只有接口啊，具体的实现怎么来？这事必须框架给处理了！所以还需要来个代理类，让消费者只管调，啥事都别管了，我代理帮你搞定。<br>
+
 虽说代理帮你搞定但是代理也需要知道它到底要调哪个机子上的远程方法，所以需要有个注册中心，这样调用方从注册中心可以知晓可以调用哪些服务提供方，一般而言提供方不止一个，毕竟只有一个挂了那不就没了
-当然还需要有容错机制，毕竟这是远程调用，网络是不可靠的，所以可能需要重试什么的。
-还要和服务提供方约定一个协议，例如我们就用 HTTP 来通信就好啦，也就是大家要讲一样的话，不然可能听不懂了。
-当然序列化必不可少，毕竟我们本地的结构是“立体”的，需要序列化之后才能传输，因此还需要约定序列化格式。
-服务提供者:
-所以提供方一般都是集群部署，那调用方需要通过负载均衡来选择一个调用，可以通过某些策略例如同机房优先调用啊啥的
-注册中心:
-当于一个平台，大家在上面暴露自己的服务，也在上面得知自己能调用哪些服务。
-当然还能做配置中心，将配置集中化处理，动态变更通知订阅者。
-还有服务监控中心；
+当然还需要有容错机制，毕竟这是远程调用，网络是不可靠的，所以可能需要重试什么的。<br>
+
+还要和服务提供方约定一个协议，例如我们就用 HTTP 来通信就好啦，也就是大家要讲一样的话，不然可能听不懂了。<br>
+
+当然序列化必不可少，毕竟我们本地的结构是“立体”的，需要序列化之后才能传输，因此还需要约定序列化格式。<br>
+
+服务提供者:<br>
+
+所以提供方一般都是集群部署，那调用方需要通过负载均衡来选择一个调用，可以通过某些策略例如同机房优先调用<br>
+
+注册中心:<br>
+
+当于一个平台，大家在上面暴露自己的服务，也在上面得知自己能调用哪些服务。<br>
+
+当然还能做配置中心，将配置集中化处理，动态变更通知订阅者。<br>
+
+还有服务监控中心用于监控客户端和服务端实时运行情况；<br>
 ### 如何上手以及在项目中使用Dubbo
-直接google: dubbo samples；
-或者:google:dubbo spring boot samples
-[https://github.com/apache/dubbo-spring-boot-project/tree/master/dubbo-spring-boot-samples/auto-configure-samples/provider-sample](https://github.com/apache/dubbo-spring-boot-project/tree/master/dubbo-spring-boot-samples/auto-configure-samples/provider-sample)
-要会“抄”代码:
-首先在消费者模型里面抄代码:
-![65295778.png](ecommerce项目总结_files/65295778.png)
+直接google: dubbo samples；<br>
+
+或者:google:dubbo spring boot samples<br>
+
+[samples](https://github.com/apache/dubbo-spring-boot-project/tree/master/dubbo-spring-boot-samples/auto-configure-samples/provider-sample
+)<br>
+要会“抄”代码:<br>
+
+首先在消费者模型里面抄代码:<br>
+
+![65295778.png](ecommerce项目总结_files/65295778.png)<br>
+
 ![65319277.png](ecommerce项目总结_files/65319277.png)
 
 
-服务提供者里面抄代码:
-下面来创建一个新的项目===>实现服务的具体实现
-![65547667.png](ecommerce项目总结_files/65547667.png)
+服务提供者里面抄代码:<br>
+
+下面来创建一个新的项目===>实现服务的具体实现<br>
+
+![65547667.png](ecommerce项目总结_files/65547667.png)<br>
+
 ![65571977.png](ecommerce项目总结_files/65571977.png)
 ## 使用docker方式的总结
 ```shell
