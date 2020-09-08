@@ -8,7 +8,7 @@
 
 篇幅限制，这里只展示重构的地方，想要看具体的原来的所有源代码，可以看下面的链接:
 
-[https://github.com/richard1230/crawler/commit/e3576d42c4d5aebc0e5a52583b47b0cdeb7fb271](https://github.com/richard1230/crawler/commit/e3576d42c4d5aebc0e5a52583b47b0cdeb7fb271)
+[需要重构部分的代码](https://github.com/richard1230/crawler/commit/e3576d42c4d5aebc0e5a52583b47b0cdeb7fb271)
 
 ![56053306.png](crawlerProjectSummary_files/56053306.png) <br>
 
