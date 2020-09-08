@@ -7,7 +7,7 @@
 - [框架篇](#框架篇)
 - [源码篇](#源码篇)
 - [java高阶-设计模式篇](#java高阶-设计模式篇)
-- [自己造的轮子](#自己造的轮子)
+- [自己做过的一些项目的总结](#自己造的轮子)
 - [其他](#其他)
 
 ## 学习方法篇
@@ -70,10 +70,10 @@
 * [设计模式看了又忘，忘了又看？](https://juejin.im/post/5ceb37a76fb9a07f0870737a)
 * [设计模式也可以这么简单](https://www.javadoop.com/post/design-pattern)
 
-## 自己造的轮子
+## 自己做过的项目的一些总结
 [记账本相关总结](https://github.com/richard1230/myBlog/blob/master/java/pocketBookProject_note/pocketBookProjectSummary.md)  <br>
 [多线程爬虫相关总结](https://github.com/richard1230/myBlog/blob/master/java/crawlerProjectSummary/crawlerProjectSummary.md)   <br>
-[电商项目总结](https://github.com/richard1230/myBlog/blob/master/java/ecommerceProjectSummary/ecommerce%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93.md)
+[电商项目总结](https://github.com/richard1230/myBlog/blob/master/java/ecommerceProjectSummary/ecommerceSummary.md)
 
 ## 其他
 * [掘金知识搜索库](http://zy2071.com/Fun/jueJinSearch.html)
