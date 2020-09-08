@@ -71,9 +71,11 @@
 	}
 
 	private static boolean isInterestingLink(String link){
-		return IsHomePage(link)&&IsNewsPage(link)
-				&&IsillegalString(link)||IsIndexPage(link)
-				&&IsNotLoginPage(link);
+		return IsHomePage(link)
+			&&IsNewsPage(link)
+			&&IsillegalString(link)
+			||IsIndexPage(link)
+			&&IsNotLoginPage(link);
 	}
 
 	private static boolean IsHomePage(String link){
