@@ -31,7 +31,7 @@
 下面给出重构之后的代码:<br>
 
 ```java
-  if(isInterestingLink(link)){
+        if(isInterestingLink(link)){
 		Document doc=httpGetAndParseHtml(link);
 		doc.select("a").stream().map(aTag->aTag.attr("href")).forEach(linkpool::add);
 		StoreIntoDatabaseIfItisNewsPage(doc);
