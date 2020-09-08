@@ -30,71 +30,71 @@
 
 下面给出重构之后的代码:<br>
 
-```
-    if(isInterestingLink(link)){
-            Document doc=httpGetAndParseHtml(link);
-            doc.select("a").stream().map(aTag->aTag.attr("href")).forEach(linkpool::add);
-            StoreIntoDatabaseIfItisNewsPage(doc);
-            processedLinks.add(link);
-            }else{
-            continue;
-            }
+```java
+  if(isInterestingLink(link)){
+		Document doc=httpGetAndParseHtml(link);
+		doc.select("a").stream().map(aTag->aTag.attr("href")).forEach(linkpool::add);
+		StoreIntoDatabaseIfItisNewsPage(doc);
+		processedLinks.add(link);
+	}else{
+		continue;
+	}
 
 
-    private static void StoreIntoDatabaseIfItisNewsPage(Document doc){
-            ArrayList<Element> articleTags=doc.select("article");
-            if(!articleTags.isEmpty()){
-            for(Element articleTag:articleTags){
-            String title=articleTags.get(0).child(0).text();
-            System.out.println(title);
-            }
-            }
-            }
-    
-    private static Document httpGetAndParseHtml(String link){
-            CloseableHttpClient httpclient=HttpClients.createDefault();
-            System.out.println(link);
-            if(link.startsWith("//")){
-            link="https:"+link;
-            }
-            HttpGet httpGet=new HttpGet(link);
-            httpGet.addHeader("User-Agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3)
-            AppleWebKit/537.36(KHTML,like Gecko)Chrome/79.0.3945.130Safari/537.36");
-    
-            try(CloseableHttpResponse response1=httpclient.execute(httpGet))
-            {
-            System.out.println(response1.getStatusLine());
-            HttpEntity entity1=response1.getEntity();
-            String html=EntityUtils.toString(entity1);
-            return Jsoup.parse(html);
-            }
-            }
-    
-    private static boolean isInterestingLink(String link){
-            return IsHomePage(link)&&IsNewsPage(link)
-            &&IsillegalString(link)||IsIndexPage(link)
-            &&IsNotLoginPage(link);
-            }
-    
-    private static boolean IsHomePage(String link){
-            return link.contains("sina.cn");
-            }
-    
-    private static boolean IsIndexPage(String link){
-            return"https://sina.cn/".equals(link);
-            }
-    
-    private static boolean IsillegalString(String link){
-            return!link.contains("\\/");
-            }
-    
-    private static boolean IsNewsPage(String link){
-            return link.contains("news.sina.cn");
-            }
-    
-    private static boolean IsNotLoginPage(String link){
-            return!link.contains("passport.sina.cn");
-            }
+	private static void StoreIntoDatabaseIfItisNewsPage(Document doc){
+		ArrayList<Element> articleTags=doc.select("article");
+		if(!articleTags.isEmpty()){
+			for(Element articleTag:articleTags){
+				String title=articleTags.get(0).child(0).text();
+				System.out.println(title);
+			}
+		}
+	}
+
+	private static Document httpGetAndParseHtml(String link){
+		CloseableHttpClient httpclient=HttpClients.createDefault();
+		System.out.println(link);
+		if(link.startsWith("//")){
+			link="https:"+link;
+		}
+		HttpGet httpGet=new HttpGet(link);
+		httpGet.addHeader("User-Agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3)
+				AppleWebKit/537.36(KHTML,like Gecko)Chrome/79.0.3945.130Safari/537.36");
+
+		try(CloseableHttpResponse response1=httpclient.execute(httpGet))
+		{
+			System.out.println(response1.getStatusLine());
+			HttpEntity entity1=response1.getEntity();
+			String html=EntityUtils.toString(entity1);
+			return Jsoup.parse(html);
+		}
+	}
+
+	private static boolean isInterestingLink(String link){
+		return IsHomePage(link)&&IsNewsPage(link)
+				&&IsillegalString(link)||IsIndexPage(link)
+				&&IsNotLoginPage(link);
+	}
+
+	private static boolean IsHomePage(String link){
+		return link.contains("sina.cn");
+	}
+
+	private static boolean IsIndexPage(String link){
+		return"https://sina.cn/".equals(link);
+	}
+
+	private static boolean IsillegalString(String link){
+		return!link.contains("\\/");
+	}
+
+	private static boolean IsNewsPage(String link){
+		return link.contains("news.sina.cn");
+	}
+
+	private static boolean IsNotLoginPage(String link){
+		return!link.contains("passport.sina.cn");
+	}
 ```
 可以发现重构之后，每个函数的大小至多10行上下，函数的名字也易读(自解释函数)，整个函数可读性非常强;
 
