@@ -18,28 +18,43 @@
 下面给出重构之后的代码:
 ```
 if (isInterestingLink(link)) {
-
-    Document doc = httpGetAndParseHtml(link);    doc.select("a").stream().map(aTag->aTag.attr("href")).forEach(linkpool::add);
-    StoreIntoDatabaseIfItisNewsPage(doc);    processedLinks.add(link);} else {
-    continue;}
-
-
+    Document doc = httpGetAndParseHtml(link);   
+    doc.select("a").stream().map(aTag->aTag.attr("href")).forEach(linkpool::add);
+    StoreIntoDatabaseIfItisNewsPage(doc);   
+    processedLinks.add(link);}
+    else {
+    continue;
+    }
  }
 }
 
 private static void StoreIntoDatabaseIfItisNewsPage(Document doc) {
-    ArrayList<Element> articleTags = doc.select("article");    if (!articleTags.isEmpty()) {
+    ArrayList<Element> articleTags = doc.select("article");   
+    if (!articleTags.isEmpty()) {
         for (Element articleTag : articleTags) {
-            String title = articleTags.get(0).child(0).text();            System.out.println(title);        }
+            String title = articleTags.get(0).child(0).text();           
+            System.out.println(title);       
+            }
     }
 }
 
 private static Document httpGetAndParseHtml(String link) {
 
-    //这是我们感兴趣的,我们只处理新浪站内的链接    //就是拿到它的数据    CloseableHttpClient httpclient = HttpClients.createDefault();    System.out.println(link);    if (link.startsWith("//")) {
-        link = "https:" + link;    }
-    HttpGet httpGet = new HttpGet(link);    httpGet.addHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36");    try (CloseableHttpResponse response1 = httpclient.execute(httpGet)) {
-        System.out.println(response1.getStatusLine());        HttpEntity entity1 = response1.getEntity();        String html = EntityUtils.toString(entity1);        return Jsoup.parse(html);    }
+      
+    CloseableHttpClient httpclient = HttpClients.createDefault();   
+    System.out.println(link);   
+    if (link.startsWith("//")) {
+        link = "https:" + link;   
+        }
+    HttpGet httpGet = new HttpGet(link);  
+    httpGet.addHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36");  
+    try (CloseableHttpResponse response1 = httpclient.execute(httpGet))
+    {
+        System.out.println(response1.getStatusLine());        
+        HttpEntity entity1 = response1.getEntity();        
+        String html = EntityUtils.toString(entity1);        
+        return Jsoup.parse(html);    
+        }
 }
 
 private static boolean isInterestingLink(String link) {
@@ -63,7 +78,7 @@ private static boolean IsNotLoginPage(String link) {
 
 
 ```
-可以发现重构之后，每个函数的大小至多10行上下，函数的名字也易读(字解释函数)，整个函数可读性非常强;
+可以发现重构之后，每个函数的大小至多10行上下，函数的名字也易读(自解释函数)，整个函数可读性非常强;
 
 
 ## 使用Mysql过程中遇到的一些问题与总结
