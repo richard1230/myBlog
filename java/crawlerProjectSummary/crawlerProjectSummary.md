@@ -31,15 +31,15 @@
 下面给出重构之后的代码:<br>
 
 ```java
-        if(isInterestingLink(link)){
-		Document doc=httpGetAndParseHtml(link);
-		doc.select("a").stream().map(aTag->aTag.attr("href")).forEach(linkpool::add);
-		StoreIntoDatabaseIfItisNewsPage(doc);
-		processedLinks.add(link);
-	}else{
-		continue;
-	}
-
+  if(isInterestingLink(link)){
+			Document doc=httpGetAndParseHtml(link);
+			doc.select("a").stream().map(aTag->aTag.attr("href")).forEach(linkpool::add);
+			StoreIntoDatabaseIfItisNewsPage(doc);
+			processedLinks.add(link);
+		}else{
+			continue;
+		}
+  
 
 	private static void StoreIntoDatabaseIfItisNewsPage(Document doc){
 		ArrayList<Element> articleTags=doc.select("article");
@@ -72,10 +72,10 @@
 
 	private static boolean isInterestingLink(String link){
 		return  IsHomePage(link)
-			&&IsNewsPage(link)
-			&&IsillegalString(link)
-			||IsIndexPage(link)
-			&&IsNotLoginPage(link);
+				&&IsNewsPage(link)
+				&&IsillegalString(link)
+				||IsIndexPage(link)
+				&&IsNotLoginPage(link);
 	}
 
 	private static boolean IsHomePage(String link){
