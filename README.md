@@ -1,8 +1,9 @@
 ## 目录
 - [学习方法篇](#学习方法篇)
 - [数据结构与算法](#数据结构与算法)
-- [java基础](#java基础)
-- [java单元测试](#java单元测试)
+-  [Java相关](#Java相关)
+- [Java基础](#Java基础)
+- [Java单元测试](#Java单元测试)
 - [多线程与并发](#多线程与并发)
 - [框架篇](#框架篇)
 - [源码篇](#源码篇)
@@ -10,15 +11,17 @@
 - [自己做过的一些项目的总结](#自己造的轮子)
 - [其他](#其他)
 
-## 学习方法篇
+# 学习方法篇
 * [技术人的修炼之道：从业余到专业](https://mp.weixin.qq.com/s/gBgFyy4MMrF5vn-8NGEVQw)
 * [关于漏洞挖掘的一点想法](https://mp.weixin.qq.com/s/79k5bxGr1ykCpN4lSeiTqw)
 * [以刷LeetCode为例谈谈如何学习](https://github.com/richard1230/myJavaBlog/issues/4) 
 * 一句话概括:教是最好的学
 
 
-## 数据结构与算法
+# 数据结构与算法
 * 算法复杂度
+
+# Java相关
 ## java基础
 * [java基础笔记1-使用git/github进行团队协作](https://github.com/richard1230/myJavaBlog/issues/2)
 * [java基础笔记2-字节码,类与包](https://github.com/richard1230/myJavaBlog/issues/3)
