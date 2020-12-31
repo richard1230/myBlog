@@ -7,7 +7,7 @@
 - [多线程与并发](#多线程与并发)
 - [框架篇](#框架篇)
 - [源码篇](#源码篇)
-- [java高阶-设计模式篇](#java高阶-设计模式篇)
+- [Java高阶-设计模式篇](#Java高阶-设计模式篇)
 - [自己做过的一些项目的总结](#自己造的轮子)
 - [前端](#前端相关)
 
@@ -22,18 +22,18 @@
 * 算法复杂度
 
 # Java相关
-## java基础
-* [java基础笔记1-使用git/github进行团队协作](https://github.com/richard1230/myJavaBlog/issues/2)
-* [java基础笔记2-字节码,类与包](https://github.com/richard1230/myJavaBlog/issues/3)
-* [java基础笔记3-对象与引用，传值与传引用](https://github.com/richard1230/myBlog/issues/28)
-* [平常开发中用的最多的java工具类,第三方依赖包](https://juejin.im/post/5d4a25b351882505c105cc6e)
+## Java基础
+* [Java基础笔记1-使用git/github进行团队协作](https://github.com/richard1230/myJavaBlog/issues/2)
+* [Java基础笔记2-字节码,类与包](https://github.com/richard1230/myJavaBlog/issues/3)
+* [Java基础笔记3-对象与引用，传值与传引用](https://github.com/richard1230/myBlog/issues/28)
+* [平常开发中用的最多的Java工具类,第三方依赖包](https://juejin.im/post/5d4a25b351882505c105cc6e)
 
-## java单元测试(拥抱开源必经之路)
+## Java单元测试(拥抱开源必经之路)
 * [单元测试练习](https://github.com/richard1230/UnitTestCI)
 
 ## 多线程与并发
 * [多线程笔记1](https://github.com/richard1230/myblog/issues/1)              <br>
-* [java并发](https://juejin.im/post/5d16a633e51d455a2f2202a3)               <br>
+* [Java并发](https://juejin.im/post/5d16a633e51d455a2f2202a3)               <br>
 * [深入理解 Java 并发核心机制](https://juejin.im/post/5e05931ee51d45582c27d737)
 
 ## 框架篇
@@ -43,7 +43,7 @@
 ## 源码篇
 * [逐行解读Spring](https://juejin.im/post/6860052518265683981)
 
-## java高阶-设计模式篇
+## Java高阶-设计模式篇
 * [创建型模式-工厂方法模式](https://github.com/richard1230/myJavaBlog/issues/5) *
 * [创建型模式-抽象工厂模式](https://github.com/richard1230/myJavaBlog/issues/6) *
 * [创建型模式-生成器模式(建造者模式)](https://github.com/richard1230/myJavaBlog/issues/7) *
@@ -68,7 +68,7 @@
 * [行为模式-访问者模式](https://github.com/richard1230/myJavaBlog/issues/27)
 
 *****************************************************************************************
-* [设计模式实战场](https://github.com/iluwatar/java-design-patterns) (强烈推荐!!!)
+* [设计模式实战场](https://github.com/iluwatar/Java-design-patterns) (强烈推荐!!!)
 * [深入设计模式](https://refactoringguru.cn/design-patterns/book)
 * [设计模式看了又忘，忘了又看？](https://juejin.im/post/5ceb37a76fb9a07f0870737a)
 * [设计模式也可以这么简单](https://www.javadoop.com/post/design-pattern)
