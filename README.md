@@ -79,6 +79,6 @@
 [电商项目总结](https://github.com/richard1230/myBlog/blob/master/java/ecommerceProjectSummary/ecommerceSummary.md)
 
 # 前端相关
-[利用JavaScript实现各种需求的一个神奇的库](https://github.com/30-seconds/30-seconds-of-code)
+[利用JavaScript实现各种需求的一个神奇的库](https://github.com/30-seconds/30-seconds-of-code) <br>
 [JavaScript实现各种需求](https://www.30secondsofcode.org/list/p/1)
 
