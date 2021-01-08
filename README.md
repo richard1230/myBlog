@@ -10,6 +10,7 @@
 - [Java高阶-设计模式篇](#Java高阶-设计模式篇)
 - [自己做过的一些项目的总结](#自己造的轮子)
 - [前端](#前端相关)
+- [shell相关](#shell相关)
 
 # 学习方法篇
 * [技术人的修炼之道：从业余到专业](https://mp.weixin.qq.com/s/gBgFyy4MMrF5vn-8NGEVQw)
