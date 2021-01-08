@@ -3,6 +3,7 @@
 ```shell
 
 $ps | grep python | grep -v grep | awk '{print $1}' | xargs kill -9
+#ps | grep Xcode | grep -v grep | awk '{print $1}' | xargs kill -9
 #explation
 $ps
   PID TTY           TIME CMD
@@ -56,3 +57,18 @@ $ps | grep python | grep -v grep
 
  `xargs kill -9 `中的 `xargs` 命令表示用前面命令的输出结果（也就是一系列的进程号）作为 kill -9 命令的参数，-9 表示强制终止，不是必须的。
 
+
+
+## simple-bash script
+
+[generate_special_length_string.sh](./generate_special_length_string.sh)
+
+[cal_string_length.sh](./cal_string_length.sh) :       usage : `sh  cal_string_length.sh  string_that_you_want_to_cal_its_length`
+
+
+
+
+
+
+
+ 
