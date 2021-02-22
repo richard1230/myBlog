@@ -81,7 +81,15 @@
 
 # 前端相关
 [利用JavaScript实现各种需求的一个神奇的库](https://github.com/30-seconds/30-seconds-of-code) <br>
-[前端里面的各种需求](https://www.30secondsofcode.org/list/p/1)
+[前端里面的各种需求](https://www.30secondsofcode.org/list/p/1) <br>
+
+[JavaScript之从原型到原型链](./front-end/从原型到原型链.md)
+
+
+
+
+
+
 
 
 # shell相关
