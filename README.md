@@ -96,5 +96,8 @@
 [summary about shell](./shell-script/shellscript.md)
 
 
+## 注意
+[新的地址可以看这里](https://github.com/richard1230/LearningCode)
+
 
 
